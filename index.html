@@ -10,24 +10,175 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+    .attribution { font-size: 11px; text-align: center; display: none;}
     .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      background-color: hsl(217, 54%, 11%);
+      min-height: 100vh;
+      font-family: 'Outfit';
+    }
+    .nft-card {
+      background-color: hsl(216, 50%, 16%);
+      width: 22rem;
+      border-radius: 15px;
+      position: relative;
+      left: 550px;
+      top: 15vh;
+    }
+    .text-part {
+      display: flex;
+      flex-direction: column;
+    }
+    .view {
+      cursor: pointer;
+      height: 3rem;
+      width: 3rem;
+      position: absolute;
+      left: 38%;
+      top: 22%;
+      opacity: 0;
+    }
+    .view:hover {
+      opacity: 1;
+    }
+    .viewing {
+      opacity: 0;
+    }
+    .viewing:hover {
+      cursor: pointer;
+      opacity: 1;
+    }
+    img {
+      width: 90%;
+      height: 300px;
+      padding: 20px;
+      border-radius: 25px;
+      transition: .5s ease;
+     }
+     .img-overlay {
+      cursor: pointer;
+      background-color: hsl(178, 100%, 50%);
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      width: 90%;
+      height: 300px;
+      top: 25.5%;
+      left: 45%;
+      border-radius: 5px;
+      margin: 20px;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+     }
+     .image:hover {
+       cursor: pointer;
+       opacity: 1;
+     }
+     .img-overlay:hover {
+       background-color: hsl(178, 100%, 50%);
+       opacity: 0.6;
+     }
+     h2 {
+       font-family: 'Outfit';
+       font-weight: 700;
+       color: hsl(0, 0%, 100%);
+       margin: 0px;
+       padding: 0 20px;
+     }
+     h2:hover {
+       cursor: pointer;
+       color: hsl(178, 100%, 50%);
+     }
+     .ethereum {
+       width: .7em;
+       height: 1.2em;
+       padding: 0px 5px 0px 0px;
+     }
+     .line {
+       width: 19.5rem;
+       height: .1px;
+       background-color: #8BACD9;
+       opacity: 30%;
+       border-radius: 25px;
+       align-self: center;
+     }
+     .clock {
+       width: 1em;
+       height: 1em;
+       padding: 3px 5px 0px 0px;
+     }
+     .price {
+       display: flex;
+       justify-content: space-between;
+       margin-bottom: 20px;
+     }
+     .left {
+       display: flex;
+       float: left;
+       padding-left: 20px;
+     }
+     .right {
+       display: flex;
+       float: right;
+       padding-right: 20px;
+     }
+     .creator {
+       padding: 0;
+       border-style: solid;
+       border-width: 1px;
+       border-radius: 50%;
+       float: left;
+       height: 4vh;
+       width: 4vh;
+       color: #fff;
+     }
+     .creator-space {
+       margin: 0px;
+       padding: 15px 0px 35px 20px;
+       display: flex;
+       flex-direction: row;
+     }
+     .creator-name {
+       margin: 0px;
+       padding-top: 7px;
+       padding-left: 15px;
+     }
+     .name:hover {
+       cursor: pointer;
+       color: hsl(178, 100%, 50%);
+     }
   </style>
 </head>
 <body>
+<main class="nft-card">
+  <img src="./images/image-equilibrium.jpg" alt="the equlibrium" class="image">
+  <div class="viewing">
+  <div class="img-overlay"></div>
+  <img src="./images/icon-view.svg" class="view">
+  </div>
+  <div class="text-part">
+  <h2>Equilibrium #3429</h2>
 
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
+  <h4 style="color: #8BACD9; font-family: 'Outfit'; font-weight: 50; font-size: 18px; margin: 20px 0px; padding: 0px 20px;">Our Equilibrium collection promotes balance and calm.</h4>
+  <div class="price">
+    <div class="left">
+      <img src="./images/icon-ethereum.svg" alt="the ethereum" class="ethereum"><p style="color: hsl(178, 100%, 50%); font-size: 16px; margin: 0px;">0.041 ETH</p>
+    </div>
+    <div class="right">
+      <img src="./images/icon-clock.svg" alt="the clock" class="clock"><p style="margin: 0; color: #8BACD9;">3 days left</p>
+    </div>
+  </div>
+  <div class="line"></div>
+  <div class="creator-space">
+    <img src="./images/image-avatar.png" alt="the creator's image" class="creator">
+    <p class="creator-name" style="color: hsl(0, 0%, 100%);"><span style="color: #8BACD9;">Creation of</span> <span class="name">Jules Wyvern</span></p>
+  </div>
+  </div>
+</main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Deeptangshu Saha</a>.
   </div>
 </body>
 </html>
